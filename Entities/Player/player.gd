@@ -12,3 +12,4 @@ func _process(delta):
 		direction = 0
 
 	position.x += direction * speed * delta
+	position.x=clamp(position.x,15,385)
