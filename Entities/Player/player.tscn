@@ -1,10 +1,41 @@
 [gd_scene format=3 uid="uid://cp374h8dax5f7"]
 
-[ext_resource type="Script" uid="uid://njntfnidwl2" path="res://Entities/Player/player.gd" id="1_3uyv8"]
 [ext_resource type="Texture2D" uid="uid://du5pjvonhxgya" path="res://assets/pixel_ship_yellow.png" id="1_4flbx"]
 
+[sub_resource type="GDScript" id="GDScript_mv1ah"]
+script/source = "extends Node2D
+
+var bullet_scene = preload(\"res://Entities/Bullet/bullet.tscn\")
+var direction: int = 0
+var speed: int = 300
+var shoot_time: float = 1.0
+var shoot_counter: float = 0.0
+
+func _ready():
+	print(\"Player script is ready!\")
+
+func _process(delta):
+	shoot_counter += delta
+	if Input.is_action_pressed(\"shoot\") and shoot_counter > shoot_time:
+		shoot_counter = 0
+		var bullet_instance = bullet_scene.instantiate()
+		bullet_instance.position.x = position.x
+		bullet_instance.position.y = position.y - 50
+		get_tree().current_scene.get_node(\"Bullets\").add_child(bullet_instance)
+
+	if Input.is_action_pressed(\"left\"):
+		direction = -1
+	elif Input.is_action_pressed(\"right\"):
+		direction = 1
+	else:
+		direction = 0
+
+	position.x += direction * speed * delta
+	position.x = clamp(position.x, 15, 385)
+"
+
 [node name="Player" type="Node2D" unique_id=458508747]
-script = ExtResource("1_3uyv8")
+script = SubResource("GDScript_mv1ah")
 
 [node name="Ship" type="Sprite2D" parent="." unique_id=775081245]
 scale = Vector2(0.4, 0.4)

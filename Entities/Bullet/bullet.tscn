@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://i2yqy6mhvs0r"]
 
 [ext_resource type="Texture2D" uid="uid://b2spmx6mhc0oa" path="res://assets/pixel_laser_yellow.png" id="1_vkx67"]
+[ext_resource type="Script" uid="uid://b3p6pir5o20rm" path="res://Entities/Bullet/bullet.gd" id="1_ymhw4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
 size = Vector2(8, 17)
 
 [node name="Bullet" type="Node2D" unique_id=471423397]
+script = ExtResource("1_ymhw4")
 
 [node name="BulletSprite" type="Sprite2D" parent="." unique_id=171392840]
 position = Vector2(0, 1)
@@ -16,3 +18,5 @@ texture = ExtResource("1_vkx67")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BulletArea" unique_id=918823010]
 shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="bullet_instance" type="Node" parent="." unique_id=626618247]

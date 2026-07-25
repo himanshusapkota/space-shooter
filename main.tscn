@@ -10,12 +10,12 @@ size = Vector2(400, 8)
 [node name="Main" type="Node2D" unique_id=1953272446]
 
 [node name="BackgroundandSprite" type="Sprite2D" parent="." unique_id=1949163501]
-position = Vector2(200, 301)
+position = Vector2(199, 298)
 scale = Vector2(1, 1.5)
 texture = ExtResource("1_ig7tw")
 
 [node name="Player" parent="." unique_id=458508747 instance=ExtResource("2_0xm2m")]
-position = Vector2(198, 577)
+position = Vector2(178, 577)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1338095165]
 
@@ -27,3 +27,5 @@ texture = ExtResource("3_h2yge")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2101840410]
 position = Vector2(199, 515)
 shape = SubResource("RectangleShape2D_q03w0")
+
+[node name="Bullets" type="Node" parent="." unique_id=1188779104]
