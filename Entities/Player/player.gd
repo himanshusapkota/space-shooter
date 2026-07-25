@@ -2,8 +2,11 @@ extends Node2D
 
 var direction: int = 0
 var speed: int = 300
+func _ready():
+	print("Player script is ready!")
 
 func _process(delta):
+	print("process running, direction=", direction)
 	if Input.is_action_pressed("left"):
 		direction = -1
 	elif Input.is_action_pressed("right"):
@@ -13,3 +16,8 @@ func _process(delta):
 
 	position.x += direction * speed * delta
 	position.x=clamp(position.x,15,385)
+	
+
+	
+	
+	

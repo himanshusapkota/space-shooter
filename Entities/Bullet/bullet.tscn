@@ -2,7 +2,17 @@
 
 [ext_resource type="Texture2D" uid="uid://b2spmx6mhc0oa" path="res://assets/pixel_laser_yellow.png" id="1_vkx67"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
+size = Vector2(8, 17)
+
 [node name="Bullet" type="Node2D" unique_id=471423397]
 
 [node name="BulletSprite" type="Sprite2D" parent="." unique_id=171392840]
+position = Vector2(0, 1)
+scale = Vector2(0.63, 0.5222223)
 texture = ExtResource("1_vkx67")
+
+[node name="BulletArea" type="Area2D" parent="." unique_id=1185859833]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BulletArea" unique_id=918823010]
+shape = SubResource("RectangleShape2D_h2yge")
