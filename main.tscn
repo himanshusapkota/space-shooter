@@ -19,14 +19,14 @@ texture = ExtResource("1_ig7tw")
 [node name="Player" parent="." unique_id=458508747 instance=ExtResource("2_0xm2m")]
 position = Vector2(178, 577)
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1338095165]
+[node name="Boundary" type="Area2D" parent="." unique_id=1338095165]
 
-[node name="HorizontalBarBlue" type="Sprite2D" parent="Area2D" unique_id=2081371498]
+[node name="HorizontalBarBlue" type="Sprite2D" parent="Boundary" unique_id=2081371498]
 position = Vector2(199, 515)
 scale = Vector2(3.076923, 0.8)
 texture = ExtResource("3_h2yge")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2101840410]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundary" unique_id=2101840410]
 position = Vector2(199, 515)
 shape = SubResource("RectangleShape2D_q03w0")
 
