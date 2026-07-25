@@ -1,7 +1,7 @@
 extends Node2D
 var bullet_scene = preload("res://Entities/Bullet/bullet.tscn")
 var direction: int = 0
-var speed: int = 300
+var speed: int = 100
 var shoot_time: float = 1.0
 var shoot_counter: float = 0.0
 func _ready():
