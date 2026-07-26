@@ -14,6 +14,10 @@ func _process(delta: float) -> void:
 	position.y += speed * delta
 
 func _on_area_entered(area: Area2D) -> void:
+	if area.name == "BulletArea":
+		area.get_parent().queue_free()
+		get_tree().current_scene.add_score(10)
+		queue_free()
 	
 
 	if area.name == "BulletArea":
