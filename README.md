@@ -7,7 +7,7 @@ A simple 2D endless space shooter made with Godot. Control your spaceship, shoot
 * Left/Right Arrow Keys – Move
 * Space – Shoot
 
-## 🛠️ Built With
+##  Built With
 
 * Godot 4
 * GDScript
