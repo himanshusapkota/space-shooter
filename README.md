@@ -38,6 +38,5 @@ This game fits the Endless theme because there is no final level or ending. Enem
 
 Pleaseee Play My Game This is my first Time Making Game In Godot I will Make Game If you Like This. Please Star The Repo.
 
-## License
 
-This project is licensed under the MIT License.
+## OPEN SOURCE 
